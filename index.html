@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="banner">
+        <h1>To Do List</h1>
+        <img src="./imgs/icon.png" alt="To Do List Icon">
+    </header>
+
+    <section id="tasks-list">
+        <ul id="not-done-tasks">
+            <li>
+                <button class="custom-checkbox-button"></button>
+                <span class="task">Learn React</span>
+                <span class="delete-icon"></span>
+            </li>
+        </ul>
+
+        <div id="divider"></div>
+
+        <ul id="done-tasks">
+            <li>
+                <button class="custom-checkbox-button checked"></button>
+                <span class="task">Create a portfolio</span>
+                <span class="delete-icon"></span>
+            </li>
+        </ul>
+    </section>
+
+    <section id="add-task">
+        <input type="text" id="task-input" placeholder="Add a new task..." aria-label="New task input">
+        <button type="button" id="add-button">Add</button>
+    </section>
+
+    <footer>
+        <p>Created by <a href="https://github.com/Erraid7" target="_blank">Erraid7</a> | Copyright &copy; 2024 all rights reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

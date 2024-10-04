@@ -1,0 +1,221 @@
+body {
+    background-image: url(./imgs/background.png);
+}
+
+header#banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 116px;
+    width: 600px;
+    margin: 50px auto;
+    background-color: rgba(226, 240, 204, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+header#banner img {
+    width: 115px;
+    height: 115px;
+}
+
+header#banner h1 {
+    font-size: 60px;
+    font-family: 'Acme', sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+}
+
+section#tasks-list {
+    width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(226, 240, 204, 0.65);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+li span.task {
+    font-size: 25px;
+    font-family: 'Acme', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 1);
+    padding: 0 5px;
+    max-width: 500px;
+    word-wrap: break-word;
+}
+
+#divider {
+    width: 400px;
+    height: 4px;
+    background-color: rgba(70, 70, 70, 0.6);
+    margin: 10px auto;
+    border: none;
+    border-radius: 50px;
+}
+
+/* Style the button to look like a checkbox */
+.custom-checkbox-button {
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: 3px solid rgba(75, 75, 75, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    margin: 0 5px;
+    transition: 0.2s ease-out;
+}
+
+/* Add an animated hover effect on the checkbox */
+.custom-checkbox-button:hover {
+    background-color: rgba(56, 144, 36, 0.3);
+}
+
+.custom-checkbox-button.checked:hover {
+    background-color: rgba(144, 36, 36, 0.394);
+}
+
+/* Add a checkmark when checked */
+.custom-checkbox-button.checked::after {
+    content: '';
+    position: absolute;
+    left: 4.5px;
+    top: 0;
+    width: 6.5px;
+    height: 13px;
+    border: solid rgb(48, 51, 46);
+    border-width: 0 4px 4px 0;
+    border-radius: 1px;
+    transform: rotate(45deg);
+}
+
+#done-tasks li span {
+    text-decoration: line-through;
+    color: rgba(64, 64, 64, 1);
+}
+
+section#add-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 50px;
+    margin: 50px auto;
+    padding: 10px;
+    background-color: rgba(226, 240, 204, 0.65);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+}
+
+section#add-task input {
+    width: 400px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 0 10px;
+    font-family: 'Acme', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+/* focus effect on the unput field */
+section#add-task input:focus {
+    border: 2px solid rgba(161, 39, 217, 0.8);
+    outline: none;
+}
+
+section#add-task button {
+    width: 90px;
+    height: 40px;
+    margin: 0 10px;
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(161, 39, 217, 0.8);
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+section#add-task button:hover {
+    background-color: rgba(194, 117, 229);
+}
+
+/* Style for the delete icon */
+.delete-icon {
+    margin-left: auto;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.delete-icon::before,
+.delete-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(54, 54, 54, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: 0.2s ease-in-out;
+}
+
+.delete-icon::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Add a hover effect to the delete icon */
+.delete-icon:hover::before, .delete-icon:hover::after {
+    background-color: rgb(222, 41, 41);
+}
+
+/* style the footer :
+<footer>
+        <p>Created by <a href="https://github.com/Erraid7" target="_blank">Erraid7</a> | &copy; 2024 all copy rights reserved</p>
+</footer>
+ */
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer p {
+    font-size: 20px;
+    font-family: 'Acme', sans-serif;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 1);
+}
+
+footer a {
+    color: rgba(161, 39, 217, 1);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgba(194, 117, 229);
+    transition: 0.2s ease-in-out;
+}
